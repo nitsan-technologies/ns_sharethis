@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-09-03T18:20:05Z" product-name="ns_sharethis">
+		<header/>
+		<body>
+			<trans-unit id="tx_nssharethis_domain_model_sharethis">
+				<source>Sharethis</source>
+			</trans-unit>
+			<trans-unit id="tx_nssharethis_domain_model_sharethis.test">
+				<source>Test</source>
+			</trans-unit>
+
+			<trans-unit id="social_plugin.title">
+				<source>Nitsan Social Widget Plugins</source>
+			</trans-unit>
+			<trans-unit id="social_plugin.description">
+				<source>Select this option to install social widget to your Typo3 Website</source>
+			</trans-unit>
+
+
+			<!-- Extension Configuration Label -->
+
+			<trans-unit id="tx_nssharethis_domain_model_sharethis.globalSharingEnable">
+				<source>Enable Global Interface: Select this option to install globally social sharing widget to your Whole Typo3 website or disable this option if u needs to install social sharing widget in particular page in your Typo3 Website</source>
+			</trans-unit>
+
+			<!-- Label For Constant -->
+
+			<trans-unit id="tx_nssharethis_domain_model_sharethis.globalSharing">
+				<source>Select a type of social widget</source>
+			</trans-unit>
+			<trans-unit id="tx_nssharethis_domain_model_sharethis.publisher">
+				<source>Add Publisher Id [Optional] : Your unique ShareThis publisher key </source>
+			</trans-unit>
+			<trans-unit id="tx_nssharethis_domain_model_sharethis.doNotHash">
+				<source>doNotHash [Optional] : This is the master option for CopyNShare.This overrides the doNotCopy and hasAddressBar setting. If true, the 2 options are ignored.</source>
+			</trans-unit>
+			<trans-unit id="tx_nssharethis_domain_model_sharethis.doNotCopy">
+				<source>doNotCopy [Optional] : If false, “See more: yourURL.com#SThashtag” will appear after a user pastes texts after a copy action.</source>
+			</trans-unit>
+			<trans-unit id="tx_nssharethis_domain_model_sharethis.hashAddressBar">
+				<source>hashAddressBar [Optional] : If true, a special #hastag will be appended to the end of your address bar URL.</source>
+			</trans-unit>
+			<trans-unit id="tx_nssharethis_domain_model_sharethis.openDelay">
+				<source>openDelay [Optional] : Set a timer to open a Advertise</source>
+			</trans-unit>
+			<trans-unit id="tx_nssharethis_domain_model_sharethis.closeDelay">
+				<source>closeDelay [Optional] : Set a timer to close a Advertise</source>
+			</trans-unit>
+			<trans-unit id="tx_nssharethis_domain_model_sharethis.visible">
+				<source>visible [Optional] : Set visibility of Advertisement</source>
+			</trans-unit>
+			<trans-unit id="tx_nssharethis_domain_model_sharethis.position">
+				<source>position : Change the position of social widget.See what fits your site design better.</source>
+			</trans-unit>
+			<trans-unit id="tx_nssharethis_domain_model_sharethis.chicklets">
+				<source>chicklets [Optional] : Turn On/Off if you want to add more sharing tool</source>
+			</trans-unit>
+			<trans-unit id="tx_nssharethis_domain_model_sharethis.items">
+				<source>items : Add Items for Sharing Tool</source>
+			</trans-unit>
+
+			<!-- Flex Form Label -->
+			<trans-unit id="tx_nssharethis_domain_model_sharethis.categories">
+				<source>Select type of widget</source>
+			</trans-unit>
+			<trans-unit id="tx_nssharethis_domain_model_sharethis.button">
+				<source>Select button type for simple widget</source>
+			</trans-unit>
+			<trans-unit id="tx_nssharethis_domain_model_sharethis.select">
+				<source>Select ......</source>
+			</trans-unit>
+			<trans-unit id="tx_nssharethis_domain_model_sharethis.simpleWidget">
+				<source>Simple Social Widget Button</source>
+			</trans-unit>
+			<trans-unit id="tx_nssharethis_domain_model_sharethis.hoverBar">
+				<source>Widget in Sidebar</source>
+			</trans-unit>
+			<trans-unit id="tx_nssharethis_domain_model_sharethis.largeButton">
+				<source>Large Button</source>
+			</trans-unit>
+			<trans-unit id="tx_nssharethis_domain_model_sharethis.displayText">
+				<source>Display text with button</source>
+			</trans-unit>
+			<trans-unit id="tx_nssharethis_domain_model_sharethis.smallButton">
+				<source>Small Button</source>
+			</trans-unit>
+			<trans-unit id="tx_nssharethis_domain_model_sharethis.horizontal">
+				<source>Buttons with Hit Count - Horizontal</source>
+			</trans-unit>
+			<trans-unit id="tx_nssharethis_domain_model_sharethis.vertical">
+				<source>Buttons with Hit Count - Vertical</source>
+			</trans-unit>
+			
+		</body>
+	</file>
+</xliff>

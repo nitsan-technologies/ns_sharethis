@@ -1,0 +1,14 @@
+mod.wizards.newContentElement.wizardItems.plugins {
+	elements{
+		ns_sharethis{
+			iconIdentifier = content-plugin
+			title = LLL:EXT:ns_sharethis/Resources/Private/Language/locallang_db.xlf:social_plugin.title
+			description = LLL:EXT:ns_sharethis/Resources/Private/Language/locallang_db.xlf:social_plugin.description
+			tt_content_defValues{
+				CType = list
+				list_type = nssharethis_nitsansharethis
+			}
+		}
+	}
+}
+

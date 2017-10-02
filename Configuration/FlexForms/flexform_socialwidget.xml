@@ -1,0 +1,91 @@
+<T3DataStructure>
+	<sheets>
+		<!--
+			################################
+			  SHEET General Settings
+			################################
+		-->
+			<sDEF>
+				<ROOT>
+					<TCEforms>
+						<sheetTitle>Function</sheetTitle>
+					</TCEforms>
+					<type>array</type>
+					<el>
+						<settings.categories>
+							<TCEforms>
+								<label>LLL:EXT:ns_sharethis/Resources/Private/Language/locallang_db.xlf:tx_nssharethis_domain_model_sharethis.categories</label>
+								<onChange>reload</onChange>
+								<config>
+									<type>select</type>
+									<items>
+										<numIndex index="0" type="array">
+											<numIndex index="0">LLL:EXT:ns_sharethis/Resources/Private/Language/locallang_db.xlf:tx_nssharethis_domain_model_sharethis.select</numIndex>
+											<numIndex index="1"></numIndex>
+										</numIndex>
+										<numIndex index="1">
+											<numIndex index="0">LLL:EXT:ns_sharethis/Resources/Private/Language/locallang_db.xlf:tx_nssharethis_domain_model_sharethis.simpleWidget</numIndex>
+											<numIndex index="1">simpleWidget</numIndex>
+										</numIndex>
+										<numIndex index="2">
+											<numIndex index="0">LLL:EXT:ns_sharethis/Resources/Private/Language/locallang_db.xlf:tx_nssharethis_domain_model_sharethis.hoverBar</numIndex>
+											<numIndex index="1">hoverBar</numIndex>
+										</numIndex>
+									</items>
+									<eval>trim,required</eval>
+
+								</config>
+							</TCEforms>
+						</settings.categories>
+						<settings.buttonType>
+							<TCEforms>
+								<label>LLL:EXT:ns_sharethis/Resources/Private/Language/locallang_db.xlf:tx_nssharethis_domain_model_sharethis.button</label>
+								<displayCond>FIELD:settings.categories:=:simpleWidget</displayCond>
+								<onChange>reload</onChange>
+								<config>
+									<type>select</type>
+									<items>
+										<numIndex index="0">
+											<numIndex index="0">LLL:EXT:ns_sharethis/Resources/Private/Language/locallang_db.xlf:tx_nssharethis_domain_model_sharethis.largeButton</numIndex>
+											<numIndex index="1">largeButton</numIndex>
+										</numIndex>
+										<numIndex index="1">
+											<numIndex index="0">LLL:EXT:ns_sharethis/Resources/Private/Language/locallang_db.xlf:tx_nssharethis_domain_model_sharethis.smallButton</numIndex>
+											<numIndex index="1">smallButton</numIndex>
+										</numIndex>
+										<numIndex index="2">
+											<numIndex index="0">LLL:EXT:ns_sharethis/Resources/Private/Language/locallang_db.xlf:tx_nssharethis_domain_model_sharethis.horizontal</numIndex>
+											<numIndex index="1">horizontal</numIndex>
+										</numIndex>
+										<numIndex index="3">
+											<numIndex index="0">LLL:EXT:ns_sharethis/Resources/Private/Language/locallang_db.xlf:tx_nssharethis_domain_model_sharethis.vertical</numIndex>
+											<numIndex index="1">vertical</numIndex>
+										</numIndex>
+									</items>
+								</config>
+							</TCEforms>
+						</settings.buttonType>
+						<settings.displayText>
+							<TCEforms>
+								<label>LLL:EXT:ns_sharethis/Resources/Private/Language/locallang_db.xlf:tx_nssharethis_domain_model_sharethis.displayText</label>
+								<displayCond>
+								    <AND>
+								        <numIndex index="0">FIELD:settings.buttonType:=:smallButton</numIndex>
+								        <numIndex index="1">FIELD:settings.categories:=:simpleWidget</numIndex>
+								    </AND>
+								</displayCond>
+								<config>
+									<type>check</type>
+								</config>
+							</TCEforms>
+						</settings.displayText>
+					</el>
+				</ROOT>
+			</sDEF>
+			
+	</sheets>
+</T3DataStructure>
+
+
+
+

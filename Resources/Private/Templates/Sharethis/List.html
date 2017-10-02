@@ -1,0 +1,56 @@
+
+<f:layout name="Default" />
+
+This Template is responsible for creating a table of domain objects.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        List.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+
+<f:if condition="{configuration.globalSharing}==0">
+	<f:if condition="{settings.categories}=='simpleWidget'">
+		<f:then>
+			<f:if condition="{settings.buttonType}== 'horizontal'">
+				<f:then>
+					<f:for each="{socials}" as="social">
+						<span class='st_{social}_hcount' displayText='{social}'></span>
+					</f:for>			
+				</f:then>
+				<f:else>
+					<f:if condition="{settings.buttonType}== 'vertical'">
+						<f:then>
+							<f:for each="{socials}" as="social">
+								<span class='st_{social}_vcount' displayText='{social}'></span>
+							</f:for>
+						</f:then>
+						<f:else>
+							<f:if condition="{settings.buttonType}== 'smallButton'">
+								<f:then>
+									<f:for each="{socials}" as="social">
+										<span class='st_{social}' displayText="{f:if(condition:'{settings.displayText}',then:'{social}')}"></span>
+									</f:for>
+								</f:then>
+								<f:else>
+									<f:for each="{socials}" as="social">
+										<span class='st_{social}_large' displayText='{social}'></span>
+									</f:for>
+								</f:else>
+							</f:if>
+						</f:else>
+					</f:if>
+				</f:else>
+			</f:if>
+		</f:then>
+	</f:if>
+</f:if>
+						
+</f:section>
+
+					
