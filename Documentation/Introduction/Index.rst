@@ -1,50 +1,59 @@
-﻿.. ==================================================
-.. FOR YOUR INFORMATION
-.. --------------------------------------------------
-.. -*- coding: utf-8 -*- with BOM.
-
+﻿
 .. include:: ../Includes.txt
 
+============
+Introduction
+============
+
+ext:ns_sharethis
+================
+
 .. figure:: Images/TYPO3-EXTns_sharethis-Plugin-for-ShareThis-min.jpg
-   :alt: -Plugin-for-ShareThis
+   :alt: The plugin for ShareThis
+
+.. _What-does-it-do:
 
 What does it do?
 ================
 
-One of the only TYPO3 extension is developed to integrate all the features of www.Sharethis.com which is one of the most popular third-party social media platform!
+`ShareThis <https://www.sharethis.com/>`_ is a free Social Media platform which
+provides a professional and highly customizable ecosystem for social media
+sharing.
+It helps promoting your valuable content.
+It will increase traffic and engagement by helping people share your posts and
+pages to various services. Services include *Facebook*, *Twitter*, *Pinterest*,
+*Google*, *Gmail*, *LinkedIn* and **more than 100** other sharing and social
+media sites.
 
-www.Sharethis.com is a free Social Media platform which provides professional and highly customizable ecosystem for social media sharing and optimizing of your valuable content. Take a look at their site at `https://www.sharethis.com/ <https://www.sharethis.com/>`_
+The goal of this TYPO3 extension
+`ns_sharethis <https://extensions.typo3.org/extension/ns_sharethis/>`_
+is to integrate **all the features** of ShareThis_.
 
-It will increases traffic & engagement by helping people share your posts and pages to any service. Services include *Facebook*, *Twitter*, *Pinterest*, *Google*, *Gmail*, *LinkedIn* & "over 100 more" sharing and social media sites & apps.
 
-Screenshots
-============
+.. _Some-impressions:
 
-Frontend of your site with "Global" social shareing
----------------------------------------------------
+Some impressions
+================
+
+
+General page
+------------
 
 .. figure:: Images/TYPO3-EXTns_sharethis-Front_Global.png
-   :width: 700px
-   :alt: ns_sharethis-Front_Global
+   :alt: screenshot "general"
+   :class: with-shadow
 
-Frontend of your site with social shaing "Inside Page"
-------------------------------------------------------
+Inside a page
+-------------
 
 .. figure:: Images/TYPO3-EXTns_sharethis-Front_Insid_Page-final.png
-   :width: 800px
-   :alt: Front_Insid_Page
+   :alt: screenshot "inside a page"
+   :class: with-shadow
 
-"Buttons Layout"
-------------------------------------------------------
+Buttons layout
+--------------
 
 .. figure:: Images/TYPO3-EXTns_sharethis-logoes_Page.png
-   :width: 800px
-   :alt: Front_Insid_Page
-
-
-
-
-
-
-
+   :alt: screenshot "buttons"
+   :class: with-shadow
 
