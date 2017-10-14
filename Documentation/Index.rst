@@ -1,60 +1,59 @@
-﻿.. ==================================================
-.. FOR YOUR INFORMATION
-.. --------------------------------------------------
-.. -*- coding: utf-8 -*- with BOM.
-
-.. include:: Includes.txt
+﻿.. include:: Includes.txt
 
 
 .. _start:
 
-=============================================================
-[NITSAN] Plugin for www.Sharethis.com
-=============================================================
+==================================
+Documentation for ext:ns_sharethis
+==================================
 
-.. only:: html
+:Extension:    `ns_sharethis <https://extensions.typo3.org/extension/ns_sharethis/>`_
+               for TYPO3_
 
-	:Classification:
-		ns_sharethis
+:Version:      |release|
 
-	:Version:
-		|release|
+:Description:
+   ns_sharethis_ is a `TYPO3 <https://typo3.org/>`_ extension from
+   `[NITSAN] <http://www.nitsan.in/>`_ to integrate all the funcionality of
+   `www.ShareThis.com <https://www.sharethis.com/>`_.
 
-	:Language:
-		en
+:Keywords:
+   Sharethis.com, Socialshare, Share, Facebook, Twitter, Pinterest, Google,
+   LinkedIn, Instagram, ns, NITSAN, Social Media
 
-	:Description:
-		[NITSAN] Plugin for ShareThis.com.
+:Author:       Sanjay Chauhan <sanjay@nitsan.in>
 
-	:Keywords:
-		Sharethis.com, Socialshare, Share, Facebook, Twitter, Pinterest, Google, LinkedIn, Instagram, ns, NITSAN, Social Media
+:Company:
+   [NITSAN Technologies] http://www.nitsan.in/ \| http://www.itug.in/
 
-	:Copyright:
-		2017
+:License:
+   |cc-license| This work is licensed under a
+   `Creative Commons Attribution 4.0 International License
+   <http://creativecommons.org/licenses/by/4.0/>`_.
 
-	:Author:
-		Sanjay Chauhan [NITSAN Technologies]
+:Context:
+   The content of this document is related to TYPO3_, a GNU/GPL CMS framework
+   available from https://typo3.org/.
 
-	:Email:
-		sanjay@nitsan.in
+:Repository:   https://github.com/nitsan-technologies/ns_sharethis
 
-	:License:
-		This document is published under the Open Publication License
-		available from http://www.opencontent.org/openpub/
+:Contribute:   Please `report issues at Github
+               <https://github.com/nitsan-technologies/ns_sharethis/issues>`__.
 
-	:Rendered:
-		|today|
-
-	The content of this document is related to TYPO3,
-	a GNU/GPL CMS/Framework available from `www.typo3.org <https://typo3.org/>`__.
+:Rendered:     |today|
 
 
-	**Table of Contents**
+
+.. |cc-license| image:: license.png
+                :alt: alt="Creative Commons License"
+                :target: http://creativecommons.org/licenses/by/4.0/
+
 
 .. toctree::
-	:maxdepth: 3
-	:titlesonly:
+   :hidden:
 
-	Introduction/Index
-	AdministratorManual/Index
-	Support
+   Sitemap/Index
+   Introduction/Index
+   Installation/Index
+   Configuration/Index
+   Targets
