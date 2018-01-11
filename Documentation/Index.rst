@@ -3,23 +3,20 @@
 
 .. _start:
 
-==================================
+=====================================
 Documentation for ext:ns_sharethis
-==================================
+=====================================
 
 :Extension:    `ns_sharethis <https://extensions.typo3.org/extension/ns_sharethis/>`_
-               for TYPO3_
+               for TYPO3
 
 :Version:      |release|
 
 :Description:
-   ns_sharethis_ is a `TYPO3 <https://typo3.org/>`_ extension from
-   `[NITSAN] <http://www.nitsan.in/>`_ to integrate all the funcionality of
-   `www.ShareThis.com <https://www.sharethis.com/>`_.
+    One of the only TYPO3 extension is developed to integrate all the features of www.Sharethis.com which is one of the most popular third-party social media platform!
 
 :Keywords:
-   Sharethis.com, Socialshare, Share, Facebook, Twitter, Pinterest, Google,
-   LinkedIn, Instagram, ns, NITSAN, Social Media
+    Sharethis.com, Socialshare, Share, Facebook, Twitter, Pinterest, Google, LinkedIn, Instagram, ns, NITSAN, Social Media
 
 :Author:       Sanjay Chauhan <sanjay@nitsan.in>
 
@@ -32,7 +29,7 @@ Documentation for ext:ns_sharethis
    <http://creativecommons.org/licenses/by/4.0/>`_.
 
 :Context:
-   The content of this document is related to TYPO3_, a GNU/GPL CMS framework
+   The content of this document is related to TYPO3, a GNU/GPL CMS framework
    available from https://typo3.org/.
 
 :Repository:   https://github.com/nitsan-technologies/ns_sharethis
@@ -56,4 +53,5 @@ Documentation for ext:ns_sharethis
    Introduction/Index
    Installation/Index
    Configuration/Index
+   Support
    Targets

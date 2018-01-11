@@ -30,6 +30,7 @@ Just install this extension the usual way like any other TYPO3 extension.
 
    .. figure:: Images/TYPO3-EXTns_sharethis-Install_1.png
        :alt: installation with the extension manager in the backend
+       :width: 1100px
 
 
 #. Activate the TypoScript
@@ -48,6 +49,9 @@ Just install this extension the usual way like any other TYPO3 extension.
    #. Select **[NITSAN] ns_sharethis** at the field *Include static
       (from extensions):*
 
+   #. Include **[NITSAN] ns_sharethis** at the last place.
+
    .. figure:: Images/TYPO3-EXTns_sharethis-Install_2.png
-       :alt: Install_2
+       :alt: installation
+       :width: 1100px
 
