@@ -1,6 +1,8 @@
 <?php
 namespace Nitsan\NsSharethis\Controller;
 
+use Nitsan\NsSharethis\Util\Utility;
+
 /***************************************************************
  *
  *  Copyright notice
@@ -51,41 +53,13 @@ class SharethisController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
         $configuration = isset($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['ns_sharethis']) ? unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['ns_sharethis']) : '';
 
         $settings = $this->settings;
-        
-        $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https" : "http";
-        
-        $proxyIsHttps = false;
-        $proxySSL = trim($GLOBALS['TYPO3_CONF_VARS']['SYS']['reverseProxySSL']);
-        if ($proxySSL === '*') {
-            $proxySSL = $GLOBALS['TYPO3_CONF_VARS']['SYS']['reverseProxyIP'];
-        }
-        if (\TYPO3\CMS\Core\Utility\GeneralUtility::cmpIP($_SERVER['REMOTE_ADDR'], $proxySSL)) {
-            $proxyIsHttps = true;
-        }
-        
-        if($proxyIsHttps OR $protocol == 'https'){
-            $button_JS = 'https://ws.sharethis.com/button/buttons.js';
-            $loader_JS = 'https://ss.sharethis.com/loader.js';
-        }
-        else{
-            $button_JS = 'http://w.sharethis.com/button/buttons.js';
-            $loader_JS = 'http://s.sharethis.com/loader.js';
-        }
                     
         $main_script = '"position": "' .$configuration['position'].'"';
 
         $chicklets = ' "chicklets":{"items":['.$configuration['items'].']}';
         $script = ''.$main_script.','.$chicklets.' ';
         
-        $pageRenderer = GeneralUtility::makeInstance(PageRenderer::class);
-        $pageRenderer->addHeaderData('
-            <script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js" async="async"></script>
-            <script type="text/javascript">
-                var switchTo5x= true ;
-            </script>
-            <script type="text/javascript" id="st_insights_js" src="'.$button_JS.'"></script>
-            <script type="text/javascript" src="'.$loader_JS.'"></script>
-            ');
+        $pageRenderer->addHeaderData(Utility::getPublicRessourcesHtmlTags());
 
         if((isset($settings['categories']) AND $settings['categories']=='hoverBar') || (isset($configuration['globalSharing']) AND $configuration['globalSharing']==1))
         {
