@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="fr" datatype="plaintext" original="messages" date="2016-04-18T11:20:11Z" product-name="ns_sharethis">
+		<header/>
+		<body>
+			<trans-unit id="ns_sharethis_facebook_button_text">
+				<target>Partager</target>
+			</trans-unit>
+            <trans-unit id="ns_sharethis_twitter_button_text">
+				<target>Tweet</target>
+			</trans-unit>
+			<trans-unit id="ns_sharethis_pinterest_button_text">
+				<target>Share</target>
+			</trans-unit>
+            <trans-unit id="ns_sharethis_linkedin_button_text">
+				<target>Share</target>
+			</trans-unit>
+            <trans-unit id="ns_sharethis_googleplus_button_text">
+				<target>Share</target>
+			</trans-unit>
+			<trans-unit id="ns_sharethis_blogger_button_text">
+				<target>Share</target>
+			</trans-unit>
+            <trans-unit id="ns_sharethis_delicious_button_text">
+				<target>Share</target>
+			</trans-unit>
+            <trans-unit id="ns_sharethis_digg_button_text">
+				<target>Share</target>
+			</trans-unit>
+			<trans-unit id="ns_sharethis_email_button_text">
+				<target>Share</target>
+			</trans-unit>
+            <trans-unit id="ns_sharethis_flipboard_button_text">
+				<target>Share</target>
+			</trans-unit>
+            <trans-unit id="ns_sharethis_livejournal_button_text">
+				<target>Share</target>
+			</trans-unit>
+			<trans-unit id="ns_sharethis_mailru_button_text">
+				<target>Share</target>
+			</trans-unit>
+            <trans-unit id="ns_sharethis_meneame_button_text">
+				<target>Share</target>
+			</trans-unit>
+            <trans-unit id="ns_sharethis_odnoklassniki_button_text">
+				<target>Share</target>
+			</trans-unit>
+            <trans-unit id="ns_sharethis_print_button_text">
+				<target>Share</target>
+			</trans-unit>
+            <trans-unit id="ns_sharethis_reddit_button_text">
+				<target>Share</target>
+			</trans-unit>
+			<trans-unit id="ns_sharethis_sharethis_button_text">
+				<target>Share</target>
+			</trans-unit>
+            <trans-unit id="ns_sharethis_sms_button_text">
+				<target>Share</target>
+			</trans-unit>
+            <trans-unit id="ns_sharethis_stumbleupon_button_text">
+				<target>Share</target>
+			</trans-unit>
+			<trans-unit id="ns_sharethis_tumblr_button_text">
+				<target>Share</target>
+			</trans-unit>
+            <trans-unit id="ns_sharethis_vk_button_text">
+				<target>Share</target>
+			</trans-unit>
+            <trans-unit id="ns_sharethis_weibo_button_text">
+				<target>Share</target>
+			</trans-unit>
+			<trans-unit id="ns_sharethis_whatsapp_button_text">
+				<target>Share</target>
+			</trans-unit>
+            <trans-unit id="ns_sharethis_xing_button_text">
+				<target>Share</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,107 +1,13 @@
-.stpulldown-gradient {
-    background: #E1E1E1;
-    background: -moz-linear-gradient(top, #E1E1E1 0%, #A7A7A7 100%);
-    /* firefox */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #E1E1E1), color-stop(100%, #A7A7A7));
-    /* webkit */
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#E1E1E1', endColorstr='#A7A7A7', GradientType=0);
-    /* ie */
-    background: -o-linear-gradient(top, #E1E1E1 0%, #A7A7A7 100%);
-    /* opera */
-    color: #636363;
+.st-custom-button[data-network] {
+    background-color: #0adeff;
+    display: inline-block;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #fff;
 }
-#stpulldown .stpulldown-logo {
-    display: none !important;
-}
-#sharebar-livestream-big {
-    width: 306px !important;
-}
-#sharebar-livestream-big iframe #widgetBody {
-    height: 363px !important;
-}
-#sharebar-fb-big {
-    width: 256px !important;
-}
-#sharebar-fb-big-iframe div {
-    height: 463px !important;
-}
-#sthoverbuttons #sthoverbuttonsMain {
-    width: 45px !important;
-}
-#stpulldown #stpulldownMain {
-    max-height: 45px !important;
-}
-#sharebar-tw-big {
-    width: 256px !important;
-    height: 383px !important;
-}
-#sharebar .sharebar-window {
-    bottom: 30px !important;
-}
-.stMainServices {
-    height: 27px !important;
-}
-.stButton .stArrow {
-    height: 27px !important;
-}
-.stButton .stButton_gradient {
-    height: 23px !important;
-}
-.stButton .stBubble_count {
-    height: 38px !important;
-}
-.sharetext {
-    display: none !important;
-}
-.sthoverbuttons-label {
-    display: none !important;
-}
-#sthoverbuttons .sthoverbuttonsMain-l {
-    float: none !important;
-}
-#sharebar-livestream-more {
-    display: none !important;
-}
-.sharebar-rightblock #sharebar-livestream-small {
-    display: none !important;
-}
-.sharebar-rightblock #sharebar-livestream-big {
-    display: none !important;
-}
-div.sharebar-rightblock:nth-of-type(4) {
-    display: none !important;
-}
-.st_instagram_stbar .stLarge {
-    background-image: url(Image/instagram_32.png) !important;
-}
-.stButton .stSmBar {
-    height: 32px !important;
-    width: 32px !important;
-}
-#sharebar-hideButtonAlt {
-    width: 50px !important;
-}
-#sharebar-hideButtonAlt-middle {
-    background-size: contain !important;
-    width: 50px !important;
-}
-#sharebar-hideButtonAlt-top {
-    background-size: cover !important;
-    width: 50px !important;
-    height: 24px !important;
-}
-#sharebar-hideButtonAlt-expand {
-    margin-left: 4px !important;
-    background-position: -8px -32px !important;
-    height: 27px;
-    width: 46px !important;
-}
-#sthoverbuttonsMain .sthoverbuttons-chicklets .st_instagram_large .stLarge {
-    background-image: url(Image/instagram_32.png) !important;
-}
-#stpulldownMain .st_instagram_large .stLarge {
-    background-image: url(Image/instagram_32.png) !important;
-}
-.st_instagram_large .stLarge {
-    background-image: url(Image/instagram_32.png) !important;
+
+.st-custom-button[data-network]:hover, .st-custom-button[data-network]:focus {
+   text-decoration: underline;
+   background-color: #00c7ff;
 }

@@ -56,42 +56,9 @@
 			<trans-unit id="tx_nssharethis_domain_model_sharethis.chicklets">
 				<source>chicklets [Optional] : Turn On/Off if you want to add more sharing tool</source>
 			</trans-unit>
-			<trans-unit id="tx_nssharethis_domain_model_sharethis.items">
-				<source>items : Add Items for Sharing Tool</source>
+			<trans-unit id="tx_nssharethis_domain_model_sharethis.socials">
+				<source>social channels : Supported social channels separated by comma (see full list of supported social channels https://www.sharethis.com/support/customization/supported-social-sharing-services/) </source>
 			</trans-unit>
-
-			<!-- Flex Form Label -->
-			<trans-unit id="tx_nssharethis_domain_model_sharethis.categories">
-				<source>Select type of widget</source>
-			</trans-unit>
-			<trans-unit id="tx_nssharethis_domain_model_sharethis.button">
-				<source>Select button type for simple widget</source>
-			</trans-unit>
-			<trans-unit id="tx_nssharethis_domain_model_sharethis.select">
-				<source>Select ......</source>
-			</trans-unit>
-			<trans-unit id="tx_nssharethis_domain_model_sharethis.simpleWidget">
-				<source>Simple Social Widget Button</source>
-			</trans-unit>
-			<trans-unit id="tx_nssharethis_domain_model_sharethis.hoverBar">
-				<source>Widget in Sidebar</source>
-			</trans-unit>
-			<trans-unit id="tx_nssharethis_domain_model_sharethis.largeButton">
-				<source>Large Button</source>
-			</trans-unit>
-			<trans-unit id="tx_nssharethis_domain_model_sharethis.displayText">
-				<source>Display text with button</source>
-			</trans-unit>
-			<trans-unit id="tx_nssharethis_domain_model_sharethis.smallButton">
-				<source>Small Button</source>
-			</trans-unit>
-			<trans-unit id="tx_nssharethis_domain_model_sharethis.horizontal">
-				<source>Buttons with Hit Count - Horizontal</source>
-			</trans-unit>
-			<trans-unit id="tx_nssharethis_domain_model_sharethis.vertical">
-				<source>Buttons with Hit Count - Vertical</source>
-			</trans-unit>
-			
 		</body>
 	</file>
 </xliff>

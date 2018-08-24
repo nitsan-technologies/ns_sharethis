@@ -53,43 +53,22 @@ class SharethisController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
         $configuration = isset($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['ns_sharethis']) ? unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['ns_sharethis']) : '';
 
         $settings = $this->settings;
-                    
-        $main_script = '"position": "' .$configuration['position'].'"';
-
-        $chicklets = ' "chicklets":{"items":['.$configuration['items'].']}';
-        $script = ''.$main_script.','.$chicklets.' ';
         
-        $pageRenderer->addHeaderData(Utility::getPublicRessourcesHtmlTags());
-
-        if((isset($settings['categories']) AND $settings['categories']=='hoverBar') || (isset($configuration['globalSharing']) AND $configuration['globalSharing']==1))
-        {
-          if($configuration['position']=='bottom'){
-                $pageRenderer->addFooterData('
-                <script>
-                    var options={'.$script.'};
-                    var st_bar_widget = new sharethis.widgets.sharebar(options);
-                </script> ');   
-            } else if($configuration['position']=='top'){
-                $pageRenderer->addFooterData('
-                <script>
-                    var options={'.$script.'};
-                    var st_pulldown_widget = new sharethis.widgets.pulldownbar(options);
-                </script> ');
-            } else{
-                $pageRenderer->addFooterData('
-                <script>
-                    var options={'.$script.'};
-                    var st_hover_widget = new sharethis.widgets.hoverbuttons(options);
-                </script>
-                ');
+        $pageRenderer->addHeaderData(Utility::getPublicJsRessourcesHtmlTags());
+        
+        if($settings['socials'] === ''){
+            $settings['socials'] = $configuration['items'];
+        }
+        $socials = str_replace('"', "", $settings['socials']);
+        $socials = str_replace(" ", "", $socials);
+        $socials = explode(',',$socials);
+        foreach($socials as $index => $social){
+            if(!in_array($social, Utility::ALLOWED_SOCIALS)){
+                unset($socials[$index]);
             }
         }
 
-        $social= str_replace('"', "", $configuration['items']);
-        $social = str_replace(" ", "", $social);
-        $social = explode(",",$social);
-
-        $this->view->assign('socials',$social); 
+        $this->view->assign('socials',$socials); 
         $this->view->assign('configuration' ,$configuration);           
     }
 }

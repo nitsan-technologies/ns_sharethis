@@ -1,6 +1,6 @@
 
 plugin.tx_nssharethis {
-	
+	settings.socials = facebook,twitter,linkedin,pinterest
 	view{
 		templateRootPath.0 = {$plugin.tx_nssharethis.view.templateRootPath}
 		partialRootPath.0 = {$plugin.tx_nssharethis.view.patialRootPath} 
