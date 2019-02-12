@@ -58,12 +58,18 @@ class ShareThisViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractTagBa
             );
             
             $pageRenderer = GeneralUtility::makeInstance(PageRenderer::class);
-            $css = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::siteRelPath('ns_sharethis') . 'Resources/Public/Css/custom.css';
             $pageRenderer->addCssFile($css, $rel = 'stylesheet', $media = 'all', $compress = true, $forceOnTop = false);
             $pageRenderer->addHeaderData(Utility::getPublicJsRessourcesHtmlTags());
-
+			
+			$partialPath = 'EXT:ns_sharethis/Resources/Private/Partials/ShareButtons.html';
+			$variables = $this->templateVariableContainer->getByPath('settings');
+			$customPartialsPath = $variables['ns_sharethis']['customPartial'] ?? NULL;
+			if($customPartialsPath !== NULL){
+				$partialPath = $customPartialsPath;
+			}
+			
             $view = GeneralUtility::makeInstance('TYPO3\\CMS\\Fluid\\View\\StandaloneView');
-            $view->setTemplatePathAndFilename('EXT:ns_sharethis/Resources/Private/Partials/ShareButtons.html');
+            $view->setTemplatePathAndFilename($partialPath);
             $view->assignMultiple($data);
 
             $content = $view->render();
