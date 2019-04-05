@@ -1,0 +1,33 @@
+{
+  "name": "nitsan/ns-sharethis",
+  "type": "typo3-cms-extension",
+  "description": "One of the only TYPO3 extension is developed to integrate all the features of www.Sharethis.com which is one of the most popular third-party social media platform!",
+  "homepage": "https://extensions.typo3.org/extension/ns_sharethis/",
+  "license": "GPL-2.0+",
+  "keywords": [
+    "TYPO3 CMS",
+    "ShareThis",
+    "Nitsan",
+    "Social"
+  ],
+  "support": {
+    "issues": "https://github.com/nitsan-technologies/ns_sharethis/issues"
+  },
+  "require": {
+    "typo3/cms-core": ">=6.2.0",
+  },
+  "autoload": {
+    "psr-4": {
+      "Nitsan\\NsSharethis\\": "Classes/"
+    }
+  },
+  "replace": {
+      "ns_sharethis": "self.version",
+      "nitsan/ns-sharethis": "self.version"
+  },
+  "extra": {
+      "typo3/cms": {
+          "extension-key": "ns_sharethis"
+      }
+  }
+}
