@@ -58,7 +58,6 @@ class ShareThisViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractTagBa
             );
             
             $pageRenderer = GeneralUtility::makeInstance(PageRenderer::class);
-            $pageRenderer->addCssFile($css, $rel = 'stylesheet', $media = 'all', $compress = true, $forceOnTop = false);
             $pageRenderer->addHeaderData(Utility::getPublicJsRessourcesHtmlTags());
 			
 			$partialPath = 'EXT:ns_sharethis/Resources/Private/Partials/ShareButtons.html';
