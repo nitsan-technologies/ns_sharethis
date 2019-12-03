@@ -6,7 +6,7 @@ $_EXTKEY = 'ns_sharethis';
 $configuration = isset($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['ns_sharethis']) ? unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['ns_sharethis']) : '';
 
 
-if($configuration['globalSharing'] != '1' ){
+if(!isset($configuration['globalSharing']) OR (isset($configuration['globalSharing']) AND $configuration['globalSharing'] != 1)){
 
 	/***************
 	 * Plugin

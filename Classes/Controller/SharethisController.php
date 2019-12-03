@@ -54,7 +54,16 @@ class SharethisController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
         
         $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https" : "http";
         
-        if($protocol == 'https'){
+        $proxyIsHttps = false;
+        $proxySSL = trim($GLOBALS['TYPO3_CONF_VARS']['SYS']['reverseProxySSL']);
+        if ($proxySSL === '*') {
+            $proxySSL = $GLOBALS['TYPO3_CONF_VARS']['SYS']['reverseProxyIP'];
+        }
+        if (\TYPO3\CMS\Core\Utility\GeneralUtility::cmpIP($_SERVER['REMOTE_ADDR'], $proxySSL)) {
+            $proxyIsHttps = true;
+        }
+        
+        if($proxyIsHttps OR $protocol == 'https'){
             $button_JS = 'https://ws.sharethis.com/button/buttons.js';
             $loader_JS = 'https://ss.sharethis.com/loader.js';
         }
@@ -78,7 +87,7 @@ class SharethisController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
             <script type="text/javascript" src="'.$loader_JS.'"></script>
             ');
 
-        if($settings['categories'] == 'hoverBar' || $configuration['globalSharing'] == 1)
+        if((isset($settings['categories']) AND $settings['categories']=='hoverBar') || (isset($configuration['globalSharing']) AND $configuration['globalSharing']==1))
         {
           if($configuration['position']=='bottom'){
                 $pageRenderer->addFooterData('
