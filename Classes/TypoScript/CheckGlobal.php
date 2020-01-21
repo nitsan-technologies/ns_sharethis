@@ -16,7 +16,7 @@ class CheckGlobal extends \TYPO3\CMS\Core\Configuration\TypoScript\ConditionMatc
 
         $configuration = isset($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['ns_sharethis']) ? unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['ns_sharethis']) : '';
 
-        if(isset($configuration['globalSharing']) AND $configuration['globalSharing'] == 1)){          
+        if(isset($configuration['globalSharing']) AND $configuration['globalSharing'] == 1){          
             return true;
         }
         else{
