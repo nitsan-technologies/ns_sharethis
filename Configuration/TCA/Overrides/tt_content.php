@@ -14,7 +14,7 @@ if(!isset($configuration['globalSharing']) OR (isset($configuration['globalShari
 	\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
 		'Nitsan.' . $_EXTKEY,
 		'Nitsansharethis',
-		'Nitsan Social Widget'
+		'Nitsan Sharethis (Social Widget)'
 	   	);
 
 
