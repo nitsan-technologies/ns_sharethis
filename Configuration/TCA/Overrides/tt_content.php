@@ -24,4 +24,5 @@ if (!isset($configuration['globalSharing']) or (isset($configuration['globalShar
     } else {
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue($pluginSignature, 'FILE:EXT:' . $_EXTKEY . '/Configuration/FlexForms/flexform_socialwidget.xml');
     }
+    $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_excludelist'][$pluginSignature] = 'recursive,select_key,pages';
 }
