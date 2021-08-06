@@ -7,6 +7,6 @@ $configuration = isset($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['ns_shareth
 
 if (!isset($configuration['globalSharing']) or (isset($configuration['globalSharing']) and $configuration['globalSharing'] != 1)) {
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
-        '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:ns_sharethis/Configuration/TSconfig/ContentElementWizard.txt">'
+        '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:ns_sharethis/Configuration/TSconfig/ContentElementWizard.tsconfig">'
     );
 }
