@@ -28,9 +28,8 @@ use Nitsan\NsSharethis\Util\Utility;
  *  This copyright notice MUST APPEAR in all copies of the script!
  ***************************************************************/
 
-use TYPO3\CMS\Extbase\Utility\DebuggerUtility as Debug;
-use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Core\Page\PageRenderer;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 /**
  * SharethisController
@@ -44,34 +43,87 @@ class SharethisController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
      * @return void
      */
     public function listAction()
-    {      
+    {
         // Ouput text to user based on test
         $pageRenderer = GeneralUtility::makeInstance(PageRenderer::class);
-        $css = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::siteRelPath('ns_sharethis') . 'Resources/Public/Css/custom.css';
+        if (version_compare(TYPO3_branch, '9.0', '>')) {
+            $css = \TYPO3\CMS\Core\Utility\PathUtility::stripPathSitePrefix(\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath('ns_sharethis')) . 'Resources/Public/Css/custom.css';
+        } else {
+            $css = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::siteRelPath('ns_sharethis') . 'Resources/Public/Css/custom.css';
+        }
+
         $pageRenderer->addCssFile($css, $rel = 'stylesheet', $media = 'all', $compress = true, $forceOnTop = false);
-        
-        $configuration = isset($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['ns_sharethis']) ? unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['ns_sharethis']) : '';
+
+        if (version_compare(TYPO3_branch, '10.0', '>=')) {
+            $configuration = $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['ns_sharethis'];
+        } else {
+            $configuration = isset($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['ns_sharethis']) ? unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['ns_sharethis']) : '';
+        }
 
         $settings = $this->settings;
-        
-        $pageRenderer->addHeaderData(Utility::getPublicJsRessourcesHtmlTags());
-        
-        if($settings['socials'] === ''){
-            $settings['socials'] = $configuration['items'];
+
+        $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? 'https' : 'http';
+
+        $proxyIsHttps = false;
+        $proxySSL = trim($GLOBALS['TYPO3_CONF_VARS']['SYS']['reverseProxySSL']);
+        if ($proxySSL === '*') {
+            $proxySSL = $GLOBALS['TYPO3_CONF_VARS']['SYS']['reverseProxyIP'];
         }
-        $socials = str_replace('"', "", $settings['socials']);
-        $socials = str_replace(" ", "", $socials);
-        $socials = explode(',',$socials);
-        foreach($socials as $index => $social){
-            if(!in_array($social, Utility::ALLOWED_SOCIALS)){
-                unset($socials[$index]);
+        if (\TYPO3\CMS\Core\Utility\GeneralUtility::cmpIP($_SERVER['REMOTE_ADDR'], $proxySSL)) {
+            $proxyIsHttps = true;
+        }
+
+        if ($proxyIsHttps or $protocol == 'https') {
+            $button_JS = 'https://ws.sharethis.com/button/buttons.js';
+            $loader_JS = 'https://ss.sharethis.com/loader.js';
+        } else {
+            $button_JS = 'http://w.sharethis.com/button/buttons.js';
+            $loader_JS = 'http://s.sharethis.com/loader.js';
+        }
+
+        $main_script = '"position": "' . $configuration['position'] . '"';
+
+        $chicklets = ' "chicklets":{"items":[' . $configuration['items'] . ']}';
+        $script = '' . $main_script . ',' . $chicklets . ' ';
+
+        $pageRenderer = GeneralUtility::makeInstance(PageRenderer::class);
+        $pageRenderer->addHeaderData('
+            <script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js" async="async"></script>
+            <script type="text/javascript">
+                var switchTo5x= true ;
+            </script>
+            <script type="text/javascript" id="st_insights_js" src="' . $button_JS . '"></script>
+            <script type="text/javascript" src="' . $loader_JS . '"></script>
+            ');
+
+        if ((isset($settings['categories']) and $settings['categories']=='hoverBar') || (isset($configuration['globalSharing']) and $configuration['globalSharing']==1)) {
+            if ($configuration['position']=='bottom') {
+                $pageRenderer->addFooterData('
+                <script>
+                    var options={' . $script . '};
+                    var st_bar_widget = new sharethis.widgets.sharebar(options);
+                </script> ');
+            } elseif ($configuration['position']=='top') {
+                $pageRenderer->addFooterData('
+                <script>
+                    var options={' . $script . '};
+                    var st_pulldown_widget = new sharethis.widgets.pulldownbar(options);
+                </script> ');
+            } else {
+                $pageRenderer->addFooterData('
+                <script>
+                    var options={' . $script . '};
+                    var st_hover_widget = new sharethis.widgets.hoverbuttons(options);
+                </script>
+                ');
             }
         }
 
-        $this->view->assign('socials',$socials); 
-        $this->view->assign('configuration' ,$configuration);           
+        $social= str_replace('"', '', $configuration['items']);
+        $social = str_replace(' ', '', $social);
+        $social = explode(',', $social);
+
+        $this->view->assign('socials', $social);
+        $this->view->assign('configuration', $configuration);
     }
 }
-		
-
-		
