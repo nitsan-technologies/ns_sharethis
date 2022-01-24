@@ -22,7 +22,7 @@
     }
   },
   "replace": {
-      "nitsan/ns-sharethis": "self.version"
+      "typo3-ter/ns-sharethis": "self.version"
   },
   "config": {
     "vendor-dir": ".Build/vendor/",
