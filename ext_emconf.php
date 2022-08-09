@@ -2,7 +2,7 @@
 
 $EM_CONF[$_EXTKEY] = [
     'title' => '[NITSAN] Sharethis.com Plugin',
-    'description' => 'Easy to configure socially-share your TYPO3 site using www.Sharethis.com which is one of the most popular third-party social media platform! Live-Demo: https://demo.t3terminal.com/t3t-extensions/ You can download PRO version for more-features & free-support at https://t3terminal.com/typo3-sharethis-plugin-free/',
+    'description' => 'Easy to configure socially-share your TYPO3 site using www.Sharethis.com which is one of the most popular third-party social media platform! Live-Demo: https://demo.t3planet.com/t3t-extensions/ You can download PRO version for more-features & free-support at https://t3planet.com/typo3-sharethis-extension',
     'category' => 'plugin',
     'author' => 'NITSAN Technologies Pvt Ltd',
     'author_email' => 'sanjay@nitsan.in',
