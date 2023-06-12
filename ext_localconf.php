@@ -1,22 +1,18 @@
 <?php
-if (!defined('TYPO3_MODE')) {
+if (!defined('TYPO3')) {
     die('Access denied.');
 }
-// $_EXTKEY = 'ns_sharethis';
 
-if (version_compare(TYPO3_branch, '10.0', '>=')) {
-    $moduleClass = \Nitsan\NsSharethis\Controller\SharethisController::class;
-} else {
-    $moduleClass = 'Sharethis';
-}
+$_EXTKEY = 'ns_sharethis';
+
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-    'Nitsan.NsSharethis',
+    'NsSharethis',
     'Nitsansharethis',
     [
-        $moduleClass => 'list',
+        \Nitsan\NsSharethis\Controller\SharethisController::class => 'list',
     ],
     // non-cacheble actions
     [
-        $moduleClass => 'list',
+        \Nitsan\NsSharethis\Controller\SharethisController::class => 'list',
     ]
 );

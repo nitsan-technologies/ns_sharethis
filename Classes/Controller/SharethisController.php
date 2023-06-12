@@ -26,8 +26,12 @@ namespace Nitsan\NsSharethis\Controller;
  *  This copyright notice MUST APPEAR in all copies of the script!
  ***************************************************************/
 
+use TYPO3\CMS\Core\Core\Environment;
 use TYPO3\CMS\Core\Page\PageRenderer;
+use Psr\Http\Message\ResponseInterface;
+use TYPO3\CMS\Core\Utility\PathUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 
 /**
  * SharethisController
@@ -38,26 +42,24 @@ class SharethisController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
     /**
      * action list
      *
-     * @return void
+     * @return \Psr\Http\Message\ResponseInterface
      */
-    public function listAction()
+    public function listAction(): ResponseInterface
     {
         // Ouput text to user based on test
         $pageRenderer = GeneralUtility::makeInstance(PageRenderer::class);
-        if (version_compare(TYPO3_branch, '9.0', '>')) {
-            $css = \TYPO3\CMS\Core\Utility\PathUtility::stripPathSitePrefix(\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath('ns_sharethis')) . 'Resources/Public/Css/custom.css';
+        if (Environment::isComposerMode()) {
+            $assetPath = $this->getPath('/', 'ns_sharethis');
+            $extpath = GeneralUtility::getIndpEnv('TYPO3_SITE_URL') . $assetPath;
         } else {
-            $css = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::siteRelPath('ns_sharethis') . 'Resources/Public/Css/custom.css';
+            $extpath = PathUtility::stripPathSitePrefix(ExtensionManagementUtility::extPath('ns_sharethis')).'Resources/Public/';
         }
-
+        $css = $extpath . 'Css/custom.css';
+        
         $pageRenderer->addCssFile($css, $rel = 'stylesheet', $media = 'all', $compress = true, $forceOnTop = false);
 
-        if (version_compare(TYPO3_branch, '10.0', '>=')) {
-            $configuration = $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['ns_sharethis'];
-        } else {
-            $configuration = isset($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['ns_sharethis']) ? unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['ns_sharethis']) : '';
-        }
-
+        $configuration = $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['ns_sharethis'];
+        
         $settings = $this->settings;
 
         $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? 'https' : 'http';
@@ -67,10 +69,9 @@ class SharethisController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
         if ($proxySSL === '*') {
             $proxySSL = $GLOBALS['TYPO3_CONF_VARS']['SYS']['reverseProxyIP'];
         }
-        if (\TYPO3\CMS\Core\Utility\GeneralUtility::cmpIP($_SERVER['REMOTE_ADDR'], $proxySSL)) {
+        if (GeneralUtility::cmpIP($_SERVER['REMOTE_ADDR'], $proxySSL)) {
             $proxyIsHttps = true;
         }
-
         if ($proxyIsHttps or $protocol == 'https') {
             $button_JS = 'https://ws.sharethis.com/button/buttons.js';
             $loader_JS = 'https://ss.sharethis.com/loader.js';
@@ -123,5 +124,23 @@ class SharethisController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
 
         $this->view->assign('socials', $social);
         $this->view->assign('configuration', $configuration);
+        return $this->htmlResponse();
+    }
+
+    /**
+     * getPath for composer based setup
+     * @param mixed $path
+     * @param mixed $extName
+     * @return string
+     */
+    public function getPath($path, $extName): string
+    {
+        $arguments = ['path' => $path, 'extensionName' => $extName];
+        $path = $arguments['path'];
+        $publicPath = sprintf('EXT:%s/Resources/Public/%s', $arguments['extensionName'], ltrim($path, '/'));
+        $uri = PathUtility::getPublicResourceWebPath($publicPath);
+        $assetPath = substr($uri, 1);
+
+        return $assetPath;
     }
 }
