@@ -1,13 +1,11 @@
 
 plugin.tx_nssharethis {
-	
 	view{
 		templateRootPath.0 = {$plugin.tx_nssharethis.view.templateRootPath}
 		partialRootPath.0 = {$plugin.tx_nssharethis.view.patialRootPath} 
 		layoutRootPath.0 = {$plugin.tx_nssharethis.view.layoutRootPath}
 	}
 }
-
 
 [Nitsan\NsSharethis\TypoScript\CheckGlobal]
 page.111245 >

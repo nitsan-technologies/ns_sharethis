@@ -1,11 +1,12 @@
 <?php
+
 namespace Nitsan\NsSharethis\Controller;
 
 /***************************************************************
  *
  *  Copyright notice
  *
- *  (c) 2016
+ *  (c) 2023
  *
  *  All rights reserved
  *
@@ -38,11 +39,10 @@ use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
  */
 class SharethisController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 {
-
     /**
      * action list
      *
-     * @return \Psr\Http\Message\ResponseInterface
+     * @return ResponseInterface
      */
     public function listAction(): ResponseInterface
     {
@@ -55,11 +55,11 @@ class SharethisController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
             $extpath = PathUtility::stripPathSitePrefix(ExtensionManagementUtility::extPath('ns_sharethis')).'Resources/Public/';
         }
         $css = $extpath . 'Css/custom.css';
-        
+
         $pageRenderer->addCssFile($css, $rel = 'stylesheet', $media = 'all', $compress = true, $forceOnTop = false);
 
         $configuration = $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['ns_sharethis'];
-        
+
         $settings = $this->settings;
 
         $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? 'https' : 'http';
@@ -139,8 +139,6 @@ class SharethisController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
         $path = $arguments['path'];
         $publicPath = sprintf('EXT:%s/Resources/Public/%s', $arguments['extensionName'], ltrim($path, '/'));
         $uri = PathUtility::getPublicResourceWebPath($publicPath);
-        $assetPath = substr($uri, 1);
-
-        return $assetPath;
+        return substr($uri, 1);
     }
 }

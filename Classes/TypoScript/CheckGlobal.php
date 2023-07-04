@@ -1,4 +1,5 @@
 <?php
+
 namespace Nitsan\NsSharethis\TypoScript;
 
 /**
@@ -6,17 +7,15 @@ namespace Nitsan\NsSharethis\TypoScript;
  */
 class CheckGlobal extends \TYPO3\CMS\Core\Configuration\TypoScript\ConditionMatching\AbstractConditionMatcher
 {
-
     /**
      * Evaluate condition
      *
      * @param array $conditionParameters
      * @return bool
      */
-    public function matchCondition(array $conditionParameters)
+    public function matchCondition(array $conditionParameters): bool
     {
-        $configuration = isset($GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['ns_sharethis']) ? $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['ns_sharethis'] : '';
-
+        $configuration = $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['ns_sharethis'] ?? '';
         if (isset($configuration['globalSharing']) and $configuration['globalSharing'] == 1) {
             return true;
         } else {
