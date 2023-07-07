@@ -4,5 +4,5 @@ services:
     autoconfigure: true
     public: false
 
-  Nitsan\NsSharethis\:
+  NITSAN\NsSharethis\:
     resource: '../Classes/*'

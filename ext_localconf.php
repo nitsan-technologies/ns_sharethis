@@ -10,10 +10,10 @@ $_EXTKEY = 'ns_sharethis';
     'NsSharethis',
     'Nitsansharethis',
     [
-        \Nitsan\NsSharethis\Controller\SharethisController::class => 'list',
+        \NITSAN\NsSharethis\Controller\SharethisController::class => 'list',
     ],
     // non-cacheble actions
     [
-        \Nitsan\NsSharethis\Controller\SharethisController::class => 'list',
+        \NITSAN\NsSharethis\Controller\SharethisController::class => 'list',
     ]
 );

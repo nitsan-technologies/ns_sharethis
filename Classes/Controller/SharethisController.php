@@ -1,6 +1,6 @@
 <?php
 
-namespace Nitsan\NsSharethis\Controller;
+namespace NITSAN\NsSharethis\Controller;
 
 /***************************************************************
  *

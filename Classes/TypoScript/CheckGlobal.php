@@ -1,6 +1,6 @@
 <?php
 
-namespace Nitsan\NsSharethis\TypoScript;
+namespace NITSAN\NsSharethis\TypoScript;
 
 /**
  * CheckGlobal condition
