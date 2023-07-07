@@ -1,6 +1,5 @@
 
 plugin.tx_nssharethis {
-	
 	view{
 		templateRootPath.0 = {$plugin.tx_nssharethis.view.templateRootPath}
 		partialRootPath.0 = {$plugin.tx_nssharethis.view.patialRootPath} 
@@ -8,8 +7,7 @@ plugin.tx_nssharethis {
 	}
 }
 
-
-[Nitsan\NsSharethis\TypoScript\CheckGlobal]
+[NITSAN\NsSharethis\TypoScript\CheckGlobal]
 page.111245 >
 page.111245 = USER
 page.111245{
@@ -17,7 +15,7 @@ page.111245{
 	pluginName = Nitsansharethis
 	extensionName = NsSharethis
 	controller = Sharethis
-	vendorName = Nitsan
+	vendorName = NITSAN
 	action = list
 	switchableControllerActions{
 		Sharethis{
