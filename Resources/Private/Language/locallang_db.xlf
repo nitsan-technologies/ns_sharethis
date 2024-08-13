@@ -11,7 +11,7 @@
 			</trans-unit>
 
 			<trans-unit id="social_plugin.title">
-				<source>Nitsan Social Widget Plugins</source>
+				<source>Social Widget Plugins</source>
 			</trans-unit>
 			<trans-unit id="social_plugin.description">
 				<source>Select this option to install social widget to your Typo3 Website</source>

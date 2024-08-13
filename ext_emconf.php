@@ -1,6 +1,6 @@
 <?php
 
-$EM_CONF[$_EXTKEY] = [
+$EM_CONF['ns_sharethis'] = [
     'title' => 'Sharethis',
     'description' => 'With Help of TYPO3 ShareThis Extension, users can share the page/post with others effortlessly using the native share action.Additionally, you can choose which pages or posts to show the share buttons via our Settings page, making it simple to add the share feature to your websites.TYPO3 v12 Compitibilty is Plus! 
      
@@ -14,7 +14,7 @@ $EM_CONF[$_EXTKEY] = [
     'uploadfolder' => '0',
     'createDirs' => '',
     'clearCacheOnLoad' => 0,
-    'version' => '3.0.2',
+    'version' => '3.1.0',
     'constraints' => [
         'depends' => [
             'typo3' => '6.0.0-11.5.99',
