@@ -12,8 +12,7 @@
 					</TCEforms>
 					<type>array</type>
 					<el>
-						<settings.categories>
-							<TCEforms>
+						<settings.categories>		
 								<label>LLL:EXT:ns_sharethis/Resources/Private/Language/locallang_db.xlf:tx_nssharethis_domain_model_sharethis.categories</label>
 								<onChange>reload</onChange>
 								<config>
@@ -34,12 +33,9 @@
 										</numIndex>
 									</items>
 									<eval>trim,required</eval>
-
 								</config>
-							</TCEforms>
 						</settings.categories>
-						<settings.buttonType>
-							<TCEforms>
+						<settings.buttonType>							
 								<label>LLL:EXT:ns_sharethis/Resources/Private/Language/locallang_db.xlf:tx_nssharethis_domain_model_sharethis.button</label>
 								<displayCond>FIELD:settings.categories:=:simpleWidget</displayCond>
 								<onChange>reload</onChange>
@@ -64,11 +60,9 @@
 											<numIndex index="1">vertical</numIndex>
 										</numIndex>
 									</items>
-								</config>
-							</TCEforms>
+								</config>						
 						</settings.buttonType>
 						<settings.displayText>
-							<TCEforms>
 								<label>LLL:EXT:ns_sharethis/Resources/Private/Language/locallang_db.xlf:tx_nssharethis_domain_model_sharethis.displayText</label>
 								<displayCond>
 								    <AND>
@@ -78,8 +72,7 @@
 								</displayCond>
 								<config>
 									<type>check</type>
-								</config>
-							</TCEforms>
+								</config>		
 						</settings.displayText>
 					</el>
 				</ROOT>

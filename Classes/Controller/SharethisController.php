@@ -95,14 +95,14 @@ class SharethisController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
             <script type="text/javascript" src="' . $loader_JS . '"></script>
             ');
 
-        if ((isset($settings['categories']) and $settings['categories']=='hoverBar') || (isset($configuration['globalSharing']) and $configuration['globalSharing']==1)) {
-            if ($configuration['position']=='bottom') {
+        if ((isset($settings['categories']) and $settings['categories'] == 'hoverBar') || (isset($configuration['globalSharing']) and $configuration['globalSharing'] == 1)) {
+            if ($configuration['position'] == 'bottom') {
                 $pageRenderer->addFooterData('
                 <script>
                     var options={' . $script . '};
                     var st_bar_widget = new sharethis.widgets.sharebar(options);
                 </script> ');
-            } elseif ($configuration['position']=='top') {
+            } elseif ($configuration['position'] == 'top') {
                 $pageRenderer->addFooterData('
                 <script>
                     var options={' . $script . '};
@@ -118,7 +118,7 @@ class SharethisController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
             }
         }
 
-        $social= str_replace('"', '', $configuration['items']);
+        $social = str_replace('"', '', $configuration['items']);
         $social = str_replace(' ', '', $social);
         $social = explode(',', $social);
 

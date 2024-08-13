@@ -14,7 +14,9 @@ if (!isset($configuration['globalSharing']) or (isset($configuration['globalShar
     $pluginSignature = \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
         $_EXTKEY,
         'Nitsansharethis',
-        'Nitsan Sharethis (Social Widget)'
+        'Nitsan Sharethis (Social Widget)',
+        '',
+        'plugins'
     );
 
     $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist'][$pluginSignature] = 'pi_flexform';

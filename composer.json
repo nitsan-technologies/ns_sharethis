@@ -14,7 +14,7 @@
     "issues": "https://github.com/nitsan-technologies/ns_sharethis/issues"
   },
   "require": {
-    "typo3/cms-core": "^12"
+    "typo3/cms-core": "^12 || ^13"
   },
   "autoload": {
     "psr-4": {
