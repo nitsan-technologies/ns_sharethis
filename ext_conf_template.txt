@@ -3,10 +3,9 @@
 ###########################
 
 # cat=settings; type=boolean; label=LLL:EXT:ns_sharethis/Resources/Private/Language/locallang_db.xlf:tx_nssharethis_domain_model_sharethis.globalSharingEnable
-globalSharing =
+globalSharing = 0
 
 # cat=settings; type=options[left,right,top,bottom]; label=LLL:EXT:ns_sharethis/Resources/Private/Language/locallang_db.xlf:tx_nssharethis_domain_model_sharethis.position
-position =
-
+position = left
 # cat=settings; type=string; label=LLL:EXT:ns_sharethis/Resources/Private/Language/locallang_db.xlf:tx_nssharethis_domain_model_sharethis.items
 items = "facebook", "twitter", "linkedin", "pinterest", "email", "sharethis"

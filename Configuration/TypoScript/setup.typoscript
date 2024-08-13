@@ -1,29 +1,13 @@
-
 plugin.tx_nssharethis {
-	view{
-		templateRootPath.0 = {$plugin.tx_nssharethis.view.templateRootPath}
-		partialRootPath.0 = {$plugin.tx_nssharethis.view.patialRootPath} 
-		layoutRootPath.0 = {$plugin.tx_nssharethis.view.layoutRootPath}
-	}
+    view {
+        templateRootPath {
+            0 = {$plugin.tx_nssharethis.view.templateRootPath}
+        }
+        partialRootPath {
+            0 =  {$plugin.tx_nssharethis.view.patialRootPath} 
+        }
+        layoutRootPath {
+            0 = {$plugin.tx_nssharethis.view.layoutRootPath}
+        }
+    }
 }
-
-[NITSAN\NsSharethis\TypoScript\CheckGlobal]
-page.111245 >
-page.111245 = USER
-page.111245{
-	userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
-	pluginName = Nitsansharethis
-	extensionName = NsSharethis
-	controller = Sharethis
-	vendorName = NITSAN
-	action = list
-	switchableControllerActions{
-		Sharethis{
-			1 = list
-		}
-	}
-	settings =< plugin.tx_nssharethis.settings
-	persistence =< plugin.tx_nssharethis.persistence
-	view =< plugin.tx_nssharethis.view
-}
-[global]
