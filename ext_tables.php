@@ -4,7 +4,7 @@ if (!defined('TYPO3')) {
     die('Access denied.');
 }
 
-$configuration = isset($GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['ns_sharethis']) ? $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['ns_sharethis'] : '';
+$configuration = $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['ns_sharethis'] ?? '';
 
 if (isset($configuration['globalSharing']) and $configuration['globalSharing'] == 1) {
     ExtensionManagementUtility::addTypoScript('ns_sharethis','setup',

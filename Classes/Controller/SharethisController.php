@@ -129,11 +129,11 @@ class SharethisController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
 
     /**
      * getPath for composer based setup
-     * @param mixed $path
-     * @param mixed $extName
+     * @param string $path
+     * @param string $extName
      * @return string
      */
-    public function getPath($path, $extName): string
+    public function getPath(string $path, string $extName): string
     {
         $arguments = ['path' => $path, 'extensionName' => $extName];
         $path = $arguments['path'];
