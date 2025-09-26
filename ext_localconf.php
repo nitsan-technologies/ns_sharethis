@@ -6,6 +6,8 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider;
 use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
 
+
+
 if (!defined('TYPO3')) {
     die('Access denied.');
 }
@@ -30,3 +32,7 @@ $iconRegistry->registerIcon(
     SvgIconProvider::class,
     ['source' => 'EXT:ns_sharethis/Resources/Public/Icons/Extension.svg']
 );
+
+
+
+

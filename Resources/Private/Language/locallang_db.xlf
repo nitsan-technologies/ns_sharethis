@@ -91,6 +91,10 @@
 			<trans-unit id="tx_nssharethis_domain_model_sharethis.vertical">
 				<source>Buttons with Hit Count - Vertical</source>
 			</trans-unit>
+
+			<trans-unit id="tx_nssharethis_domain_model_sharethis.url">
+				<source>URL</source>
+			</trans-unit>
 			
 		</body>
 	</file>
