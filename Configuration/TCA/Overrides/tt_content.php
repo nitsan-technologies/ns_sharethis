@@ -15,7 +15,7 @@ $configuration = $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['ns_sharethis'] ?? ''
 $pluginSignature = ExtensionUtility::registerPlugin(
     $_EXTKEY,
     'Nitsansharethis',
-    'Nitsan Sharethis (Social Widget)',
+    'Sharethis (Social Widget)',
     'content-plugin',
     'plugins'
 
