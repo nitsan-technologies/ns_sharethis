@@ -5,4 +5,12 @@
 globalSharing = 0
 
 # cat=settings; type=string; label=LLL:EXT:ns_sharethis/Resources/Private/Language/locallang_db.xlf:tx_nssharethis_domain_model_sharethis.url
-Url =  
+url  =  
+
+# cat=settings; type=string; label=LLL:EXT:ns_sharethis/Resources/Private/Language/locallang_db.xlf:tx_nssharethis_domain_model_sharethis.class
+class =  
+
+# cat=settings; type=string; label=LLL:EXT:ns_sharethis/Resources/Private/Language/locallang_db.xlf:tx_nssharethis_domain_model_sharethis.cssPath
+csspath =
+
+
