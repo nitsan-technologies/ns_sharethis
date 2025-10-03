@@ -10,7 +10,7 @@
 				<source>Test</source>
 			</trans-unit>
 			<trans-unit id="social_plugin.title">
-				<source>Social Widget Plugins</source>
+				<source>Sharethis</source>
 			</trans-unit>
 			<trans-unit id="social_plugin.description">
 				<source>Select this option to install social widget to your Typo3 Website</source>
@@ -19,13 +19,19 @@
 				<source>Enable Global Interface: Select this option to install globally social sharing widget to your Whole Typo3 website or disable this option if u needs to install social sharing widget in particular page in your Typo3 Website</source>
 			</trans-unit>
 			<trans-unit id="tx_nssharethis_domain_model_sharethis.class">
-				<source>wrapper class</source>
+				<source>Add the Placement Tag. Place this code from the website https://platform.sharethis.com/:
+    				&lt;!-- ShareThis BEGIN --&gt;
+    				&lt;div class="sharethis-inline-share-buttons"&gt;&lt;/div&gt;
+    				&lt;!-- ShareThis END --&gt;</source>
 			</trans-unit>
 			<trans-unit id="tx_nssharethis_domain_model_sharethis.url">
-				<source>ShareThis Script URL</source>
+				<source>Add ShareThis Script to Your Site.:Place this code from the website https://platform.sharethis.com/.&lt;script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=68d65e2d371881720194419e&amp;product=sop" async="async"&gt;&lt;/script&gt;</source>
 			</trans-unit>
-			<trans-unit id="tx_nssharethis_domain_model_sharethis.cssPath">
-				<source>Css Path</source>
+			<trans-unit id="tx_nssharethis_domain_model_sharethis.flexformclass">
+				<source>Add the Placement Tag.</source>
+			</trans-unit>
+			<trans-unit id="tx_nssharethis_domain_model_sharethis.flexformurl">
+				<source>Add ShareThis Script to Your Site.</source>
 			</trans-unit>
 		</body>
 	</file>

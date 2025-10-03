@@ -16,7 +16,7 @@ $pluginSignature = ExtensionUtility::registerPlugin(
     $_EXTKEY,
     'Nitsansharethis',
     'Sharethis (Social Widget)',
-    'content-plugin',
+    'sharethis-content-plugin',
     'plugins'
 
 );

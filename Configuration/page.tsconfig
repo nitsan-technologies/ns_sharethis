@@ -1,7 +1,7 @@
 mod.wizards.newContentElement.wizardItems.plugins {
 	elements{
 		nssharethis_nitsansharethis{
-			iconIdentifier = content-plugin
+			iconIdentifier = sharethis-content-plugin
 			title = LLL:EXT:ns_sharethis/Resources/Private/Language/locallang_db.xlf:social_plugin.title
 			description = LLL:EXT:ns_sharethis/Resources/Private/Language/locallang_db.xlf:social_plugin.description
 			tt_content_defValues{

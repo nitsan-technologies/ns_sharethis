@@ -12,3 +12,22 @@ plugin.tx_nssharethis {
     }
 }
 
+
+[globalSharing()]
+page.111245 >
+page.111245 = USER
+page.111245{
+    userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+    pluginName = Nitsansharethis
+    extensionName = NsSharethis
+    controller = Sharethis
+    vendorName = NITSAN
+    action = list
+    switchableControllerActions{
+        Sharethis{
+            1 = list
+        }
+    }
+    view =< plugin.tx_nssharethis.view  
+}
+[end]
