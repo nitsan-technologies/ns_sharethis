@@ -1,21 +1,22 @@
 <?php
 
 $EM_CONF['ns_sharethis'] = [
-    'title' => 'TYPO3 Share Buttons',
-    'description' => 'Easily integrate social share buttons into your TYPO3 website. Choose where to display share options using extension settings. Enhance user engagement and support TYPO3 v12 compatibility.', 
+    'title' => 'Sharethis',
+    'description' => 'With Help of TYPO3 ShareThis Extension, users can share the page/post with others effortlessly using the native share action.Additionally, you can choose which pages or posts to show the share buttons via our Settings page, making it simple to add the share feature to your websites.TYPO3 v12 Compitibilty is Plus! 
      
+    *** Documentation & Free Support: https://t3planet.com/typo3-sharethis-extension',
     'category' => 'plugin',
     'author' => 'Team T3Planet',
     'author_email' => 'info@t3planet.de',
-    'author_company' => 'T3Planet    ',
+    'author_company' => 'T3Planet',
     'state' => 'stable',
     'internal' => '',
     'uploadfolder' => '0',
     'createDirs' => '',
-    'version' => '12.0.2',
+    'version' => '13.0.0',
     'constraints' => [
         'depends' => [
-            'typo3' => '12.0.0-12.4.99',
+            'typo3' => '12.0.0-13.9.99',
         ],
         'conflicts' => [
         ],

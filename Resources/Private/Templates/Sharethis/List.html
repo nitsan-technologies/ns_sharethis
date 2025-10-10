@@ -1,46 +1,10 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-
 <f:layout name="Default" />
-
 <f:section name="main">
-
-<f:if condition="{configuration.globalSharing}==0">
-	<f:if condition="{settings.categories}=='simpleWidget'">
-		<f:then>
-			<f:if condition="{settings.buttonType}== 'horizontal'">
-				<f:then>
-					<f:for each="{socials}" as="social">
-						<span class='st_{social}_hcount' displayText='{social}'></span>
-					</f:for>			
-				</f:then>
-				<f:else>
-					<f:if condition="{settings.buttonType}== 'vertical'">
-						<f:then>
-							<f:for each="{socials}" as="social">
-								<span class='st_{social}_vcount' displayText='{social}'></span>
-							</f:for>
-						</f:then>
-						<f:else>
-							<f:if condition="{settings.buttonType}== 'smallButton'">
-								<f:then>
-									<f:for each="{socials}" as="social">
-										<span class='st_{social}' displayText="{f:if(condition:'{settings.displayText}',then:'{social}')}"></span>
-									</f:for>
-								</f:then>
-								<f:else>
-									<f:for each="{socials}" as="social">
-										<span class='st_{social}_large' displayText='{social}'></span>
-									</f:for>
-								</f:else>
-							</f:if>
-						</f:else>
-					</f:if>
-				</f:else>
-			</f:if>
-		</f:then>
-	</f:if>
+<f:if condition="{configuration.globalSharing} == 0">
+    <f:if condition="{settings.url}">
+         {settings.url -> f:format.raw()}
+         {settings.class -> f:format.raw()}
+    </f:if>
 </f:if>
-						
 </f:section>
-
-					

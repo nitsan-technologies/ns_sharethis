@@ -6,3 +6,4 @@ services:
 
   NITSAN\NsSharethis\:
     resource: '../Classes/*'
+   

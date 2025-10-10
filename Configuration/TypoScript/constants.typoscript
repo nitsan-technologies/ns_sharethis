@@ -1,11 +1,10 @@
-
 plugin.tx_nssharethis {
-	view {
-		# cat=plugin.tx_nssharethis/file; type=string; label=Path to template root (FE)
-		templateRootPath = EXT:ns_sharethis/Resources/Private/Templates/
-		# cat=plugin.tx_nssharethis/file; type=string; label=Path to template partials (FE)
-		partialRootPath = EXT:ns_sharethis/Resources/Private/Partials/
-		# cat=plugin.tx_nssharethis/file; type=string; label=Path to template layouts (FE)
-		layoutRootPath = EXT:ns_sharethis/Resources/Private/Layouts/
-	}
+    view {
+        # cat=plugin.tx_nssharethis/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:ns_sharethis/Resources/Private/Templates/
+        # cat=plugin.tx_nssharethis/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:ns_sharethis/Resources/Private/Partials/
+        # cat=plugin.tx_nssharethis/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:ns_sharethis/Resources/Private/Layouts/
+    }
 }
