@@ -4,7 +4,7 @@ plugin.tx_nssharethis {
             0 = {$plugin.tx_nssharethis.view.templateRootPath}
         }
         partialRootPath {
-            0 =  {$plugin.tx_nssharethis.view.patialRootPath} 
+            0 = {$plugin.tx_nssharethis.view.patialRootPath} 
         }
         layoutRootPath {
             0 = {$plugin.tx_nssharethis.view.layoutRootPath}
@@ -16,15 +16,15 @@ plugin.tx_nssharethis {
 [globalSharing()]
 page.111245 >
 page.111245 = USER
-page.111245{
+page.111245 {
     userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
     pluginName = Nitsansharethis
     extensionName = NsSharethis
     controller = Sharethis
     vendorName = NITSAN
     action = list
-    switchableControllerActions{
-        Sharethis{
+    switchableControllerActions {
+        Sharethis {
             1 = list
         }
     }
