@@ -20,4 +20,5 @@ ExtensionUtility::configurePlugin(
     [
         SharethisController::class => 'list',
     ],
+    ExtensionUtility::PLUGIN_TYPE_CONTENT_ELEMENT
 );
