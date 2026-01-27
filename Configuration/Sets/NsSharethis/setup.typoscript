@@ -1,0 +1,13 @@
+@import 'EXT:ns_sharethis/Configuration/TypoScript/setup.typoscript'
+
+plugin.tx_nssharethis.view {
+    templateRootPath {
+        0 = {$ns_sharethis.templateRootPath}
+    }
+    partialRootPath {
+        0 = {$ns_sharethis.patialRootPath} 
+    }
+    layoutRootPath {
+        0 = {$ns_sharethis.layoutRootPath}
+    }
+}
