@@ -8,7 +8,6 @@ defined('TYPO3') or die();
 $_EXTKEY = 'ns_sharethis';
 
 $configuration = $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['ns_sharethis'] ?? '';
-
 /***************
  * Plugin
  */
@@ -18,14 +17,21 @@ $pluginSignature = ExtensionUtility::registerPlugin(
     'Sharethis (Social Widget)',
     'sharethis-content-plugin',
     'plugins'
-
 );
 
-$GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist'][$pluginSignature] =
-    'pi_flexform';
+$GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist'][$pluginSignature] = 'pi_flexform';
+$GLOBALS['TCA']['tt_content']['types']['list']['subtypes_excludelist'][$pluginSignature] = 'recursive,select_key,pages';
+
+// @extensionScannerIgnoreLine
 ExtensionManagementUtility::addPiFlexFormValue(
+    '*',
+    'FILE:EXT:' . $_EXTKEY . '/Configuration/FlexForms/flexform_socialwidget10.xml',
     $pluginSignature,
-    'FILE:EXT:' . $_EXTKEY . '/Configuration/FlexForms/flexform_socialwidget10.xml'
 );
-$GLOBALS['TCA']['tt_content']['types']['list']['subtypes_excludelist'][$pluginSignature] =
-    'recursive,select_key,pages';
+
+ExtensionManagementUtility::addToAllTCAtypes(
+    'tt_content',
+    '--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.plugin, pi_flexform',
+    $pluginSignature,
+    'after:palette:headers'
+);

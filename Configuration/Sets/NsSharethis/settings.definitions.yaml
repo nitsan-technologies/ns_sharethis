@@ -1,0 +1,23 @@
+categories:
+  ns_sharethis:
+    label: 'Sharethis Settings'
+  ns_sharethis.view:
+    label: 'View Settings'
+    parent: ns_sharethis
+
+settings:
+  ns_sharethis.templateRootPath:
+    label: 'Path to template root (FE)'
+    category: ns_sharethis.view
+    type: string
+    default: EXT:ns_sharethis/Resources/Private/Templates/
+  ns_sharethis.partialRootPaths:
+    label: 'Path to template partials (FE)'
+    category: ns_sharethis.view
+    type: string
+    default: EXT:ns_sharethis/Resources/Private/Partials/
+  ns_sharethis.layoutRootPaths:
+    label: 'Path to template layout (FE)'
+    category: ns_sharethis.view
+    type: string
+    default: EXT:ns_sharethis/Resources/Private/Layouts/

@@ -1,12 +1,7 @@
 <?php
 
 use NITSAN\NsSharethis\Controller\SharethisController;
-use TYPO3\CMS\Core\Imaging\IconRegistry;
-use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider;
 use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
-use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
-use TYPO3\CMS\Core\Configuration\ExtensionConfiguration;
 
 if (!defined('TYPO3')) {
     die('Access denied.');
@@ -14,6 +9,7 @@ if (!defined('TYPO3')) {
 
 $_EXTKEY = 'ns_sharethis';
 
+// @extensionScannerIgnoreLine
 ExtensionUtility::configurePlugin(
     'NsSharethis',
     'Nitsansharethis',
@@ -23,17 +19,6 @@ ExtensionUtility::configurePlugin(
     // non-cacheble actions
     [
         SharethisController::class => 'list',
-    ]
+    ],
+    ExtensionUtility::PLUGIN_TYPE_CONTENT_ELEMENT
 );
-//register icon
-$iconRegistry = GeneralUtility::makeInstance(IconRegistry::class);
-$iconRegistry->registerIcon(
-    'sharethis-content-plugin',
-    SvgIconProvider::class,
-    ['source' => 'EXT:ns_sharethis/Resources/Public/Icons/Extension.svg']
-);
-
-
-
-
-

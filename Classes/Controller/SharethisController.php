@@ -1,4 +1,5 @@
 <?php
+
 namespace NITSAN\NsSharethis\Controller;
 
 use Psr\Http\Message\ResponseInterface;
@@ -59,5 +60,5 @@ class SharethisController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
         return $this->htmlResponse();
     }
 
- 
+
 }

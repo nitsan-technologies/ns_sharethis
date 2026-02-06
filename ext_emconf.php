@@ -13,10 +13,10 @@ $EM_CONF['ns_sharethis'] = [
     'internal' => '',
     'uploadfolder' => '0',
     'createDirs' => '',
-    'version' => '13.0.0',
+    'version' => '14.0.0',
     'constraints' => [
         'depends' => [
-            'typo3' => '12.0.0-13.9.99',
+            'typo3' => '12.4.37-14.9.99',
         ],
         'conflicts' => [
         ],
