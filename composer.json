@@ -14,7 +14,8 @@
     "issues": "https://github.com/nitsan-technologies/ns_sharethis/issues"
   },
   "require": {
-    "typo3/cms-core": "^12.4.37 || ^13 || ^14"
+    "typo3/cms-core": "^12.4.37 || ^13 || ^14",
+    "nitsan/ns-license": "^14.5.4"
   },
   "autoload": {
     "psr-4": {
@@ -22,7 +23,7 @@
     }
   },
   "replace": {
-      "typo3-ter/ns-sharethis": "self.version"
+    "typo3-ter/ns-sharethis": "self.version"
   },
   "config": {
     "vendor-dir": ".Build/vendor/",
@@ -30,9 +31,9 @@
   },
   "extra": {
     "typo3/cms": {
-        "cms-package-dir": "{$vendor-dir}/typo3/cms",
-        "web-dir": ".Build/public",
-        "extension-key": "ns_sharethis"
+      "cms-package-dir": "{$vendor-dir}/typo3/cms",
+      "web-dir": ".Build/public",
+      "extension-key": "ns_sharethis"
     }
   }
 }
