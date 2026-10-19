@@ -17,6 +17,7 @@ $EM_CONF['ns_sharethis'] = [
     'constraints' => [
         'depends' => [
             'typo3' => '12.4.37-14.9.99',
+            'ns_license' => '14.5.4-14.9.99',
         ],
         'conflicts' => [
         ],
